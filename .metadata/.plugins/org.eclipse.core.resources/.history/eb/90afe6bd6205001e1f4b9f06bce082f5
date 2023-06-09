@@ -1,0 +1,46 @@
+package in.ineuron.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet(name = "test", urlPatterns = { "/test" })
+public class TestApp extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		    System.out.println("Implementation classes for tomcat servers ::");
+		    ServletConfig Config = getServletConfig();
+		    ServletContext Context = getServletContext();
+		    
+		    System.out.println("Implementation class for config::" + Config.getClass().getName());
+		    System.out.println("Implementation class for context::" + Context.getClass().getName());
+		    System.out.println("Implementation class for request::" + request.getClass().getName());
+		    System.out.println("Implementation class for response::" + response.getClass().getName());
+	
+	
+	}
+
+}
+
+//OUTPUT AS BELOW U OBSERVE
+
+/*
+ 
+  Implementation classes for tomcat servers ::
+  Implementation class for config::org.apache.catalina.core.StandardWrapperFacade
+  Implementation class for context::org.apache.catalina.core.ApplicationContextFacade
+  Implementation class for request::org.apache.catalina.connector.RequestFacade
+  Implementation class for response::org.apache.catalina.connector.ResponseFacade
+
+ */

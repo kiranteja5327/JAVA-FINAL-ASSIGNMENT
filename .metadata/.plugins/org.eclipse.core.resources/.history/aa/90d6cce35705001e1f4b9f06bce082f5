@@ -1,0 +1,15 @@
+/*
+ * 
+ * 10. Write a Java program that reads a set of integers from the user and stores them in a
+List. The program should then find the second largest and second smallest elements
+in the List.
+ */
+
+public class QUESTION10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
